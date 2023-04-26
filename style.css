@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Super Mario 256', sans-serif;
+}
+/* header {
+  background: lightgrey;
+}
+button {
+  background: whitesmoke;
+} */
+html
+
+
+body {
+  background: white;
+  margin: 2rem;
+  background-image:  url(https://upload.wikimedia.org/wikipedia/commons/0/05/Mario_Series_Logo.svg);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: left;
+
+}
+
+
+.title{
+  margin-left: 350px;
+  margin-bottom: 5px;
+}
+
+.span1{
+  color: rgb(0, 98, 255);
+  -webkit-text-stroke: 2px black; 
+}
+.span2{
+  color: rgb(255, 242, 0);
+  -webkit-text-stroke: 2px black;
+}
+.span3{
+  color: rgb(255, 21, 0);
+  -webkit-text-stroke: 2px black;
+}
+
+
+.game-field {
+  
+  
+  background-image: url(https://www.clipartmax.com/png/middle/471-4712169_super-mario-bros-logo-vector-%7E-format-cdr-ai-eps-super-mario.png);
+  box-shadow: 10px 10px 10px green;
+  border-radius: 14px;
+  /*same as gamefield*/
+  padding: 1rem;
+  border: solid rgb(11, 11, 11) 15px;
+  gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 47%;
+  height: auto;
+  margin: 0 auto;
+  perspective: 800px; /*parent needs this to work when doing 3d perspektive*/
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  border-radius: 10px;
+  border: solid red 3px;
+  flex: 0 0 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s; /*rotation animation*/
+  
+}
+
+.frontSide,
+.backSide {
+  border-radius: 5px;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  pointer-events: none; /*med eller inte???*/
+  backface-visibility: hidden;
+}
+
+.frontSide {
+  background-image: url("assets/back.png");
+  background-size: cover;
+}
+.backSide,
+.turnCard {
+  transform: rotateY(180deg);
+}
+
+.toggleCard {
+  transform: rotateY(180deg);
+}
+
+.player-score-field1{
+  background-color: red;
+  width: 200px;
+  height: 20px;
+  text-align: center;
+  margin-top: 12px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px green;
+  border: solid 8px black;
+  padding-top: 2px;
+  
+}
+  
+  
+
+.player-score-field2{
+  border-radius: 10px;
+  background-color: rgb(255, 230, 0);
+  height: 20px;
+  width: 200px;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px green;
+  border: solid 8px black;
+  padding-top: 2px;
+  
+}
+
+
+
+
+.player-turn-lbl{
+
+    font-family: serif;
+    color:#003c80;
+    text-align: center;
+    animation: animate 1.3s linear infinite;
+    font-family: 'Super Mario 256', sans-serif;
+    -webkit-text-stroke: 2px black;
+    
+  } 
+  .player-turn{
+    
+    color: green;
+    font-weight: 1000;
+    -webkit-text-stroke: 2px black;
+    
+  }
+   
+  @keyframes animate{
+    0%{
+      opacity: 10;
+    }
+    50%{
+      opacity: 0.7;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  
+
+  .player-1{
+   
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 7px solid rgb(234, 26, 26);
+    width: 150px;
+    height: 15px;
+    box-shadow: 3px 3px 3px rgb(5, 101, 205);
+  }
+
+  .player-2{
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 7px solid rgb(234, 192, 26);
+    width: 150px;
+    height: 15px;
+    box-shadow: 3px 3px 3px rgb(5, 101, 205);
+  }
+  
+  .name-btn{
+    border: 4px solid black;
+    height: 25px;
+    width: 170px;
+    border-radius: 5px;
+  }
+
+  
+
+
